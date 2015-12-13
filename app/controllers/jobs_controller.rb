@@ -12,7 +12,7 @@ class JobsController < ApplicationController
     @totalinternship_applications = Job.where(:adminuser_id => current_user.id).where(:jobtype => "Internship").count
     @totalpaidemployment_applications = Job.where(:adminuser_id => current_user.id).where(:jobtype => "Paid Employment").count
     @totalvolunteer_applications = Job.where(:adminuser_id => current_user.id).where(:jobtype => "Volunteer").count
-    @totalinterviewsscheduled = Interviewrecord.where(:AdminEmails => params[:user_email]).count
+    @totalinterviewsscheduled = Interviewrecord.where(:AdminEmails => current_user.email).count
     #@jobs = Job.all
     @email_id=params[:user_email];
   end
