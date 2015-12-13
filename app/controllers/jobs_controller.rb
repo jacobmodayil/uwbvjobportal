@@ -52,7 +52,7 @@ class JobsController < ApplicationController
       render template: "jobs/view_applicant_information"
     end
     if @job.jobtype == "Paid Employment"
-      @paidemployment_application=PaidemploymentApplication.where(:Job_id => params[:job_id]).where(:Applicant_id => params[:applicant_id]).first
+      @paidemployment_application=PaidemploymentApplication.where(:job_id => params[:job_id]).where(:Applicant_id => params[:applicant_id]).first
       render template: "jobs/view_applicant_information"
     end
   end
