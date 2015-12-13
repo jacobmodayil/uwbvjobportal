@@ -580,4 +580,4 @@ We have reviewed you application and and have decided to move on</textarea>
 
 <div id='result' style='color: green;'></div>
 
-<%= link_to "Go Back", jobs_path %>
+<%= link_to "Go Back", jobs_path(:user_email => current_user.email) %>

@@ -64,5 +64,5 @@ gem 'factory_girl_rails', '>= 4.1.0', :require => false
 
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
-
+gem 'rails_12factor', group: :production
 end
